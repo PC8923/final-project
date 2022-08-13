@@ -1,0 +1,21 @@
+---
+title: "About"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## About Me
+My name is **Jihan Bhuiyan**, and I am a rising sophomore at Lexington High School. I am fluent in Python, C++, and Java, and familiar with a variety of other languages including R, which was used to make this project. Outside of coding, I am a regular mountain hiker during the warmer months in New England and a somewhat active one in the winter.
+
+## About the Project
+I chose to do a project on monkeypox due to my interest in epidemiology which was sparked during the COVID-19 pandemic two years ago, in addition to my desire to help disperse the stigma around who the virus may possibly be disproportionately affecting. I was also able to find sufficient data enabling me to do an acceptable level of data analysis.
+
+## Contact Links
+* [GitHub](https://github.com/PC8923)
+* [Project repository](https://github.com/PC8923/final-project)
+* [Email](lexingtonmawx@gmail.com)
+
+## Credits
+This was my final project for the [Kane's Free Data Science Bootcamp](https://bootcamp.davidkane.info/). Consider participating; it will teach you a lot in a very short time.
