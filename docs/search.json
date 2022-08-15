@@ -5,15 +5,30 @@
       "title": "About",
       "author": [],
       "contents": "\r\nAbout Me\r\nMy name is Jihan Bhuiyan, and I am a rising\r\nsophomore at Lexington High School. I am fluent in Python, C++, and\r\nJava, and familiar with a variety of other languages including R, which\r\nwas used to make this project. Outside of coding, I am a regular\r\nmountain hiker during the warmer months in New England and a somewhat\r\nactive one in the winter.\r\nAbout the Project\r\nI chose to do a project on monkeypox due to my interest in\r\nepidemiology which was sparked during the COVID-19 pandemic two years\r\nago, in addition to my desire to help disperse the stigma around who the\r\nvirus may possibly be disproportionately affecting. I was also able to\r\nfind sufficient data enabling me to do an acceptable level of data\r\nanalysis.\r\nContact Links\r\nGitHub\r\nProject\r\nrepository\r\nEmail\r\nCredits\r\nThis was my final project for the Kane’s Free Data Science\r\nBootcamp. Consider participating; it will teach you a lot in a very\r\nshort time.\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-08-12T23:21:25-04:00"
+      "last_modified": "2022-08-15T12:43:01-04:00"
+    },
+    {
+      "path": "hospitalization.html",
+      "title": "Hospitalization Rate",
+      "description": "To analyze the hospitalization rate of monkeypox.\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\nFor these plots, I am going to compare the hospitalization rates for\r\nmonkeypox in countries in North America and Europe, the two main regions\r\nimpacted by the outbreak this year. Since the United States and Italy\r\nhave the most hospitalization data in their respective regions, I will\r\nuse these for my comparison.\r\n\r\n\r\n\r\nThis chart demonstrates that the majority of monkeypox cases in the\r\nUS so far have not resulted in hospitalization.\r\n\r\n\r\n\r\nThis graph shows that just over a simple majority of monkeypox cases\r\nin Italy have resulted in hospitalization. This is over three times as\r\ncommon as hospitalization in the US.\r\nAnalysis\r\nBased on what we see above, one can conclude that hospitalization\r\nfrom monkeypox is significantly more common in Italy than the US. This\r\nmay be due to a variety of factors, including quality of health,\r\naccessibility of healthcare, and the like. However, these numbers are\r\nsomewhat crude as of now due to how early it is in the outbreak, and may\r\nbe refined over the coming months.\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-08-15T12:43:04-04:00"
     },
     {
       "path": "index.html",
       "title": "An Analysis of Monkeypox Demographics",
-      "description": "This project will analyze some new data about the current monkeypox outbreak.\n",
+      "description": "This project will explore some new data about the current monkeypox outbreak.\n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\nAt first glance, the current outbreak of monkeypox would appear to be\r\ndisproportionately affecting men, with over 95% of confirmed cases being\r\nrecorded in such people. The dataset is from global.health, compiling\r\nindividual case data originally from a number of governmental\r\ninstitutions worldwide. The data was then cleaned up and plotted in a\r\nstraightforward manner. While it may appear that monkeypox only impacts\r\ngay and bisexual men, this conclusion doesn’t complement past outbreaks,\r\nand is possibly due to deficits in testing.\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-08-12T23:21:28-04:00"
+      "last_modified": "2022-08-15T12:43:06-04:00"
+    },
+    {
+      "path": "sources.html",
+      "title": "Sources",
+      "author": [],
+      "contents": "\r\nThe dataset is from Global.health. The raw data can be\r\nfound on GitHub.\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-08-15T12:43:06-04:00"
     }
   ],
   "collections": []

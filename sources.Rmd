@@ -1,0 +1,9 @@
+---
+title: "Sources"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+* The dataset is from [Global.health](https://global.health/). The raw data can be found on [GitHub](https://github.com/globaldothealth/monkeypox/blob/main/latest.csv).

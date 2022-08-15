@@ -1,0 +1,58 @@
+---
+title: "Hospitalization Rate"
+description: |
+  To analyze the hospitalization rate of monkeypox.
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+```{r hospitalization-plot}
+plot_2 <- read_rds("plot-2.rds")
+```
+
+For these plots, I am going to compare the hospitalization rates for monkeypox in countries in North America and Europe, the two main regions impacted by the outbreak this year. Since the United States and Italy have the most hospitalization data in their respective regions, I will use these for my comparison.
+
+```{r}
+plot_2a <- plot_2 |>
+  filter(Country == "United States") |>
+  mutate(hospitalized = if_else(hospitalized == "Y", "Yes", "No")) |>
+  group_by(hospitalized) |>
+  summarize(hospitalized_total = n(), .groups = "drop") |>
+  mutate(hospitalized_percent = hospitalized_total/29) |>
+  ggplot(mapping = aes(x = hospitalized, y = hospitalized_percent, fill = hospitalized)) +
+  scale_fill_brewer(palette = "Dark2") +
+  geom_col() +
+  scale_y_continuous(labels = scales::percent_format()) +
+  theme_minimal() +
+  labs(title = "Percent of Monkeypox Cases Resulting in Hospitalization (US)", subtitle = "Only a small percentage of cases in the US have resulted in hospitalization", x = "Hospitalization Status", y = "Percent of Total Cases", caption = "Data source: Global.health (2022)") +
+  theme(legend.position = "none")
+plot_2a
+```
+
+This chart demonstrates that the majority of monkeypox cases in the US so far have not resulted in hospitalization.
+
+```{r}
+plot_2b <- plot_2 |>
+  filter(Country == "Italy") |>
+  mutate(hospitalized = if_else(hospitalized == "Y", "Yes", "No")) |>
+  group_by(hospitalized) |>
+  summarize(hospitalized_total = n(), .groups = "drop") |>
+  mutate(hospitalized_percent = hospitalized_total/32) |>
+  ggplot(mapping = aes(x = hospitalized, y = hospitalized_percent, fill = hospitalized)) +
+  scale_fill_brewer(palette = "Dark2") +
+  geom_col() +
+  scale_y_continuous(labels = scales::percent_format()) +
+  theme_minimal() +
+  labs(title = "Percent of Monkeypox Cases Resulting in Hospitalization (Italy)", subtitle = "More than half of Italy's cases resulted in hospitalization", x = "Hospitalization Status", y = "Percent of Total Cases", caption = "Data source: Global.health (2022)") +
+  theme(legend.position = "none")
+plot_2b
+```
+
+This graph shows that just over a simple majority of monkeypox cases in Italy have resulted in hospitalization. This is over three times as common as hospitalization in the US.
+
+## Analysis
+Based on what we see above, one can conclude that hospitalization from monkeypox is significantly more common in Italy than the US. This may be due to a variety of factors, including quality of health, accessibility of healthcare, and the like. However, these numbers are somewhat crude as of now due to how early it is in the outbreak, and may be refined over the coming months.
