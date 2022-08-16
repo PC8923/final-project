@@ -1,0 +1,30 @@
+---
+title: "Age Distribution"
+description: |
+  To analyze the distribution of monkeypox cases by age groups.
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+For this plot, I will analyze the distribution of monkeypox cases by age.
+
+```{r age-plot}
+plot_3 <- read_rds("plot-3.rds")
+
+plot_3 |>
+  ggplot(mapping = aes(x = age_group, y = age_total, fill = age_group)) +
+  geom_col(color = "black") +
+  scale_fill_brewer(palette = "Blues") +
+  theme_minimal() +
+  labs(title = "Monkeypox Cases by Age Groups", subtitle = "The majority of monkeypox cases have been in adults in their twenties and thirties", x = "Age Group", y = "Number of Cases", caption = "Data source: Global.health (2022)") +
+  theme(legend.position = "none")
+```
+
+The graph above demonstrates a standard bell-curve distribution, with cases being most common in adults between their late twenties and early forties.
+
+## Analysis
+From this graph one can conclude that adults in their thirties are most likely to get monkeypox. This is a logical conclusion since one of the main ways monkeypox spreads is through sexual contact, and people of this age group are generally the most sexually active. This distribution will be refined as more data becomes available.

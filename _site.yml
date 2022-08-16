@@ -9,6 +9,8 @@ navbar:
       href: index.html
     - text: "Hospitalization Rate"
       href: hospitalization.html
+    - text: "Age Distribution"
+      href: age.html
     - text: "Sources"
       href: sources.html
     - text: "About"
